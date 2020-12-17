@@ -5,12 +5,20 @@
     <link>https://yujing-chen.github.io/publication-type/1/</link>
       <atom:link href="https://yujing-chen.github.io/publication-type/1/index.xml" rel="self" type="application/rss+xml" />
     <description>1</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 07 Mar 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://yujing-chen.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>1</title>
       <link>https://yujing-chen.github.io/publication-type/1/</link>
     </image>
+    
+    <item>
+      <title>Running out of stem: a comparative study across stem majors of college students at-risk of dropping out early</title>
+      <link>https://yujing-chen.github.io/publication/lak/</link>
+      <pubDate>Wed, 07 Mar 2018 00:00:00 +0000</pubDate>
+      <guid>https://yujing-chen.github.io/publication/lak/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>An exadafdasfadsfsdfsadfsfsafsdfsdf</title>
@@ -32,14 +40,6 @@ featured: true&lt;/h2&gt;
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Running out of stem: a comparative study across stem majors of college students at-risk of dropping out early</title>
-      <link>https://yujing-chen.github.io/publication/lak/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yujing-chen.github.io/publication/lak/</guid>
-      <description></description>
     </item>
     
   </channel>
