@@ -34,10 +34,10 @@
   
     
   
-  <meta name="description" content="(Preprint)Federated learning (FL) is a machine learning paradigm where a shared central model is learned across distributed edge devices while the training data remains on these devices. Federated Averaging (FedAvg) is the leading optimization method for training non-convex models in this setting with a synchronized protocol. However, the assumptions made by FedAvg are not realistic given the heterogeneity of devices. In particular, the volume and distribution of collected data vary in the training process due to different sampling rates of edge devices. The edge devices themselves also vary in their available communication bandwidth and system configurations, such as memory, processor speed, and power requirements. This leads to vastly different training times as well as model/data transfer times. Furthermore, availability issues at edge devices can lead to a lack of contribution from specific edge devices to the federated model. In this paper, we present an Asynchronous Online Federated Learning (ASO-Fed) framework, where the edge devices perform online learning with continuous streaming local data and a central server aggregates model parameters from clients. Our framework updates the central model in an asynchronous manner to tackle the challenges associated with both varying computational loads at heterogeneous edge devices and edge devices that lag behind or dropout. We perform extensive experiments on a simulated benchmark image dataset and three real-world non-IID streaming datasets. The results demonstrate the effectiveness of ASO-Fed on converging fast and maintaining good prediction performance.">
+  <meta name="description" content="Federated learning (FL) involves training a model over massive distributed devices, while keeping the training data localized. This form of collaborative learning exposes new tradeoffs among model convergence speed, model accuracy, balance across clients, and communication cost, with new challenges including (1) straggler problem, where the clients lag due to data or (computing and network) resource heterogeneity, and (2) communication bottleneck, where a large number of clients communicate their local updates to a central server and bottleneck the server. Many existing FL methods focus on optimizing along only one dimension of the tradeoff space. Existing solutions use asynchronous model updating or tiering-based synchronous mechanisms to tackle the straggler problem. However, the asynchronous methods can easily create a network communication bottleneck, while tiering may introduce biases as tiering favors faster tiers with shorter response latencies. To address these issues, we present FedAT, a novel Federated learning method with Asynchronous Tiers under Non-i.i.d. data. FedAT synergistically combines synchronous intra-tier training and asynchronous cross-tier training. By bridging the synchronous and asynchronous training through tiering, FedAT minimizes the straggler effect with improved convergence speed and test accuracy. FedAT uses a straggler-aware, weighted aggregation heuristic to steer and balance the training for further accuracy improvement. FedAT compresses the uplink and downlink communications using an efficient, polyline-encoding-based compression algorithm, therefore minimizing the communication cost. Results show that FedAT improves the prediction performance by up to 21.09%, and reduces the communication cost by up to 8.5x, compared to state-of-the-art FL methods.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://yujing-chen.github.io/publication/asofed/">
+  <link rel="alternate" hreflang="en-us" href="https://yujing-chen.github.io/publication/fedat/">
 
   
 
@@ -261,7 +261,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://yujing-chen.github.io/publication/asofed/">
+  <link rel="canonical" href="https://yujing-chen.github.io/publication/fedat/">
 
   
   
@@ -277,15 +277,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Yujing Chen">
-  <meta property="og:url" content="https://yujing-chen.github.io/publication/asofed/">
-  <meta property="og:title" content="Asynchronous Online Federated Learning for Edge Devices with Non-IID Data | Yujing Chen">
-  <meta property="og:description" content="(Preprint)Federated learning (FL) is a machine learning paradigm where a shared central model is learned across distributed edge devices while the training data remains on these devices. Federated Averaging (FedAvg) is the leading optimization method for training non-convex models in this setting with a synchronized protocol. However, the assumptions made by FedAvg are not realistic given the heterogeneity of devices. In particular, the volume and distribution of collected data vary in the training process due to different sampling rates of edge devices. The edge devices themselves also vary in their available communication bandwidth and system configurations, such as memory, processor speed, and power requirements. This leads to vastly different training times as well as model/data transfer times. Furthermore, availability issues at edge devices can lead to a lack of contribution from specific edge devices to the federated model. In this paper, we present an Asynchronous Online Federated Learning (ASO-Fed) framework, where the edge devices perform online learning with continuous streaming local data and a central server aggregates model parameters from clients. Our framework updates the central model in an asynchronous manner to tackle the challenges associated with both varying computational loads at heterogeneous edge devices and edge devices that lag behind or dropout. We perform extensive experiments on a simulated benchmark image dataset and three real-world non-IID streaming datasets. The results demonstrate the effectiveness of ASO-Fed on converging fast and maintaining good prediction performance."><meta property="og:image" content="https://yujing-chen.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://yujing-chen.github.io/publication/fedat/">
+  <meta property="og:title" content="FedAT: A communication-efficient federated learning method with asynchronous tiers under non-iid data | Yujing Chen">
+  <meta property="og:description" content="Federated learning (FL) involves training a model over massive distributed devices, while keeping the training data localized. This form of collaborative learning exposes new tradeoffs among model convergence speed, model accuracy, balance across clients, and communication cost, with new challenges including (1) straggler problem, where the clients lag due to data or (computing and network) resource heterogeneity, and (2) communication bottleneck, where a large number of clients communicate their local updates to a central server and bottleneck the server. Many existing FL methods focus on optimizing along only one dimension of the tradeoff space. Existing solutions use asynchronous model updating or tiering-based synchronous mechanisms to tackle the straggler problem. However, the asynchronous methods can easily create a network communication bottleneck, while tiering may introduce biases as tiering favors faster tiers with shorter response latencies. To address these issues, we present FedAT, a novel Federated learning method with Asynchronous Tiers under Non-i.i.d. data. FedAT synergistically combines synchronous intra-tier training and asynchronous cross-tier training. By bridging the synchronous and asynchronous training through tiering, FedAT minimizes the straggler effect with improved convergence speed and test accuracy. FedAT uses a straggler-aware, weighted aggregation heuristic to steer and balance the training for further accuracy improvement. FedAT compresses the uplink and downlink communications using an efficient, polyline-encoding-based compression algorithm, therefore minimizing the communication cost. Results show that FedAT improves the prediction performance by up to 21.09%, and reduces the communication cost by up to 8.5x, compared to state-of-the-art FL methods."><meta property="og:image" content="https://yujing-chen.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://yujing-chen.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-12-11T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-10-11T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-12-11T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-10-11T00:00:00&#43;00:00">
   
 
   
@@ -307,16 +307,16 @@
   "@type": "Article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://yujing-chen.github.io/publication/asofed/"
+    "@id": "https://yujing-chen.github.io/publication/fedat/"
   },
-  "headline": "Asynchronous Online Federated Learning for Edge Devices with Non-IID Data",
+  "headline": "FedAT: A communication-efficient federated learning method with asynchronous tiers under non-iid data",
   
-  "datePublished": "2020-12-11T00:00:00Z",
-  "dateModified": "2020-12-11T00:00:00Z",
+  "datePublished": "2020-10-11T00:00:00Z",
+  "dateModified": "2020-10-11T00:00:00Z",
   
   "author": {
     "@type": "Person",
-    "name": "Yujing Chen"
+    "name": "Zheng Chai"
   },
   
   "publisher": {
@@ -327,7 +327,7 @@
       "url": "https://yujing-chen.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "(Preprint)Federated learning (FL) is a machine learning paradigm where a shared central model is learned across distributed edge devices while the training data remains on these devices. Federated Averaging (FedAvg) is the leading optimization method for training non-convex models in this setting with a synchronized protocol. However, the assumptions made by FedAvg are not realistic given the heterogeneity of devices. In particular, the volume and distribution of collected data vary in the training process due to different sampling rates of edge devices. The edge devices themselves also vary in their available communication bandwidth and system configurations, such as memory, processor speed, and power requirements. This leads to vastly different training times as well as model/data transfer times. Furthermore, availability issues at edge devices can lead to a lack of contribution from specific edge devices to the federated model. In this paper, we present an Asynchronous Online Federated Learning (ASO-Fed) framework, where the edge devices perform online learning with continuous streaming local data and a central server aggregates model parameters from clients. Our framework updates the central model in an asynchronous manner to tackle the challenges associated with both varying computational loads at heterogeneous edge devices and edge devices that lag behind or dropout. We perform extensive experiments on a simulated benchmark image dataset and three real-world non-IID streaming datasets. The results demonstrate the effectiveness of ASO-Fed on converging fast and maintaining good prediction performance."
+  "description": "Federated learning (FL) involves training a model over massive distributed devices, while keeping the training data localized. This form of collaborative learning exposes new tradeoffs among model convergence speed, model accuracy, balance across clients, and communication cost, with new challenges including (1) straggler problem, where the clients lag due to data or (computing and network) resource heterogeneity, and (2) communication bottleneck, where a large number of clients communicate their local updates to a central server and bottleneck the server. Many existing FL methods focus on optimizing along only one dimension of the tradeoff space. Existing solutions use asynchronous model updating or tiering-based synchronous mechanisms to tackle the straggler problem. However, the asynchronous methods can easily create a network communication bottleneck, while tiering may introduce biases as tiering favors faster tiers with shorter response latencies. To address these issues, we present FedAT, a novel Federated learning method with Asynchronous Tiers under Non-i.i.d. data. FedAT synergistically combines synchronous intra-tier training and asynchronous cross-tier training. By bridging the synchronous and asynchronous training through tiering, FedAT minimizes the straggler effect with improved convergence speed and test accuracy. FedAT uses a straggler-aware, weighted aggregation heuristic to steer and balance the training for further accuracy improvement. FedAT compresses the uplink and downlink communications using an efficient, polyline-encoding-based compression algorithm, therefore minimizing the communication cost. Results show that FedAT improves the prediction performance by up to 21.09%, and reduces the communication cost by up to 8.5x, compared to state-of-the-art FL methods."
 }
 </script>
 
@@ -345,7 +345,7 @@
 
 
 
-  <title>Asynchronous Online Federated Learning for Edge Devices with Non-IID Data | Yujing Chen</title>
+  <title>FedAT: A communication-efficient federated learning method with asynchronous tiers under non-iid data | Yujing Chen</title>
 
 </head>
 
@@ -651,7 +651,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Asynchronous Online Federated Learning for Edge Devices with Non-IID Data</h1>
+  <h1>FedAT: A communication-efficient federated learning method with asynchronous tiers under non-iid data</h1>
 
   
 
@@ -668,12 +668,13 @@
   <div>
     
 
-  <span class="author-highlighted">
+  <span >
+      Zheng Chai</span>, <span class="author-highlighted">
       Yujing Chen</span>, <span >
-      Yue Ning</span>, <span >
-      Martin Slawski</span>, <span >
+      Liang Zhao</span>, <span >
+      Yue Cheng</span>, <span >
       Huzefa Rangwala.
-In 2020 IEEE International Conference on Big Data (Big Data)</span>
+(Priprint)</span>
   </div>
   
   
@@ -684,7 +685,7 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
     
       
     
-    December 2020
+    October 2020
   </span>
   
 
@@ -736,14 +737,14 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/pdf/1911.02134.pdf" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary my-1 mr-1" href="https://arxiv.org/pdf/2010.05958.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
 <button type="button" class="btn btn-outline-primary my-1 mr-1 js-cite-modal"
-        data-filename="/publication/asofed/cite.bib">
+        data-filename="/publication/fedat/cite.bib">
   Cite
 </button>
 
@@ -777,7 +778,7 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
 
     
     <h3>Abstract</h3>
-    <p class="pub-abstract">(Preprint)Federated learning (FL) is a machine learning paradigm where a shared central model is learned across distributed edge devices while the training data remains on these devices. Federated Averaging (FedAvg) is the leading optimization method for training non-convex models in this setting with a synchronized protocol. However, the assumptions made by FedAvg are not realistic given the heterogeneity of devices. In particular, the volume and distribution of collected data vary in the training process due to different sampling rates of edge devices. The edge devices themselves also vary in their available communication bandwidth and system configurations, such as memory, processor speed, and power requirements. This leads to vastly different training times as well as model/data transfer times. Furthermore, availability issues at edge devices can lead to a lack of contribution from specific edge devices to the federated model. In this paper, we present an Asynchronous Online Federated Learning (ASO-Fed) framework, where the edge devices perform online learning with continuous streaming local data and a central server aggregates model parameters from clients. Our framework updates the central model in an asynchronous manner to tackle the challenges associated with both varying computational loads at heterogeneous edge devices and edge devices that lag behind or dropout. We perform extensive experiments on a simulated benchmark image dataset and three real-world non-IID streaming datasets. The results demonstrate the effectiveness of ASO-Fed on converging fast and maintaining good prediction performance.</p>
+    <p class="pub-abstract">Federated learning (FL) involves training a model over massive distributed devices, while keeping the training data localized. This form of collaborative learning exposes new tradeoffs among model convergence speed, model accuracy, balance across clients, and communication cost, with new challenges including (1) straggler problem, where the clients lag due to data or (computing and network) resource heterogeneity, and (2) communication bottleneck, where a large number of clients communicate their local updates to a central server and bottleneck the server. Many existing FL methods focus on optimizing along only one dimension of the tradeoff space. Existing solutions use asynchronous model updating or tiering-based synchronous mechanisms to tackle the straggler problem. However, the asynchronous methods can easily create a network communication bottleneck, while tiering may introduce biases as tiering favors faster tiers with shorter response latencies. To address these issues, we present FedAT, a novel Federated learning method with Asynchronous Tiers under Non-i.i.d. data. FedAT synergistically combines synchronous intra-tier training and asynchronous cross-tier training. By bridging the synchronous and asynchronous training through tiering, FedAT minimizes the straggler effect with improved convergence speed and test accuracy. FedAT uses a straggler-aware, weighted aggregation heuristic to steer and balance the training for further accuracy improvement. FedAT compresses the uplink and downlink communications using an efficient, polyline-encoding-based compression algorithm, therefore minimizing the communication cost. Results show that FedAT improves the prediction performance by up to 21.09%, and reduces the communication cost by up to 8.5x, compared to state-of-the-art FL methods.</p>
     
 
     
@@ -805,7 +806,7 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
       <div class="col-md-10">
         <div class="row">
           <div class="col-12 col-md-3 pub-row-heading">Publication</div>
-          <div class="col-12 col-md-9">In <em>2020 IEEE International Conference on Big Data (Big Data)</em></div>
+          <div class="col-12 col-md-9">In <em>submission</em></div>
         </div>
       </div>
       <div class="col-md-1"></div>
@@ -837,7 +838,7 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://yujing-chen.github.io/publication/asofed/&amp;text=Asynchronous%20Online%20Federated%20Learning%20for%20Edge%20Devices%20with%20Non-IID%20Data" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://yujing-chen.github.io/publication/fedat/&amp;text=FedAT:%20A%20communication-efficient%20federated%20learning%20method%20with%20asynchronous%20tiers%20under%20non-iid%20data" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -850,7 +851,7 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://yujing-chen.github.io/publication/asofed/&amp;t=Asynchronous%20Online%20Federated%20Learning%20for%20Edge%20Devices%20with%20Non-IID%20Data" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://yujing-chen.github.io/publication/fedat/&amp;t=FedAT:%20A%20communication-efficient%20federated%20learning%20method%20with%20asynchronous%20tiers%20under%20non-iid%20data" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -863,7 +864,7 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
       
       
       <li>
-        <a href="mailto:?subject=Asynchronous%20Online%20Federated%20Learning%20for%20Edge%20Devices%20with%20Non-IID%20Data&amp;body=https://yujing-chen.github.io/publication/asofed/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=FedAT:%20A%20communication-efficient%20federated%20learning%20method%20with%20asynchronous%20tiers%20under%20non-iid%20data&amp;body=https://yujing-chen.github.io/publication/fedat/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -876,7 +877,7 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://yujing-chen.github.io/publication/asofed/&amp;title=Asynchronous%20Online%20Federated%20Learning%20for%20Edge%20Devices%20with%20Non-IID%20Data" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://yujing-chen.github.io/publication/fedat/&amp;title=FedAT:%20A%20communication-efficient%20federated%20learning%20method%20with%20asynchronous%20tiers%20under%20non-iid%20data" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -889,7 +890,7 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
       
       
       <li>
-        <a href="whatsapp://send?text=Asynchronous%20Online%20Federated%20Learning%20for%20Edge%20Devices%20with%20Non-IID%20Data%20https://yujing-chen.github.io/publication/asofed/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=FedAT:%20A%20communication-efficient%20federated%20learning%20method%20with%20asynchronous%20tiers%20under%20non-iid%20data%20https://yujing-chen.github.io/publication/fedat/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -902,7 +903,7 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://yujing-chen.github.io/publication/asofed/&amp;title=Asynchronous%20Online%20Federated%20Learning%20for%20Edge%20Devices%20with%20Non-IID%20Data" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://yujing-chen.github.io/publication/fedat/&amp;title=FedAT:%20A%20communication-efficient%20federated%20learning%20method%20with%20asynchronous%20tiers%20under%20non-iid%20data" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -921,6 +922,12 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
 
 
   
+  
+    
+
+
+
+
   
     
 

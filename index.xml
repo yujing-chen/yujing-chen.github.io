@@ -33,10 +33,18 @@
     </item>
     
     <item>
-      <title>Asynchronous Online Federated Learning for Edge Devices with Non-IID Data (Preprint)</title>
+      <title>Asynchronous Online Federated Learning for Edge Devices with Non-IID Data</title>
       <link>https://yujing-chen.github.io/publication/asofed/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       <guid>https://yujing-chen.github.io/publication/asofed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FedAT: A communication-efficient federated learning method with asynchronous tiers under non-iid data</title>
+      <link>https://yujing-chen.github.io/publication/fedat/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://yujing-chen.github.io/publication/fedat/</guid>
       <description></description>
     </item>
     
