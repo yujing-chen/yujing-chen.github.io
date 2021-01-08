@@ -60,7 +60,7 @@
   
   
   
-  <meta name="theme-color" content="#2962ff">
+  <meta name="theme-color" content="#1565c0">
   
 
   
@@ -75,7 +75,7 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
 
     
     
@@ -86,14 +86,14 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
         
       
     
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
 
     
@@ -231,8 +231,8 @@
   
     
       
-      
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
     
   
 
@@ -240,7 +240,8 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.min.f98df29a00e95b3c73b5872c04d5d8a6.css">
+  
+  <link rel="stylesheet" href="/css/wowchemy.9d711cebf380679328885aff8188d64e.css">
 
   
 
@@ -261,7 +262,10 @@
   <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Yujing Chen">
   
 
+  
   <link rel="manifest" href="/index.webmanifest">
+  
+
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
@@ -329,9 +333,14 @@
   
   
   
-  <script src="/js/wowchemy-init.js"></script>
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7264cf0eba3b66951b36da7d2cecf9c5.js"></script>
 
-  <aside class="search-results" id="search">
+  
+
+<aside class="search-modal" id="search">
   <div class="container">
     <section class="search-header">
 
@@ -340,16 +349,19 @@
           <h1>Search</h1>
         </div>
         <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
         </div>
       </div>
 
       <div id="search-box">
         
         <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
         
       </div>
+
+      
 
     </section>
     <section class="section-search-results">
@@ -361,6 +373,7 @@
     </section>
   </div>
 </aside>
+
 
 
   <div class="page-header">
@@ -640,6 +653,8 @@
   
 
   
+
+  
   
 
   
@@ -759,7 +774,7 @@
     <h1>Biography</h1>
 
     <div class="article-style">
-      <p>I am a Ph.D. student in the Department of Computer Science at George Mason University, supervised by Prof. Huzefa Rangwala. My research interests are Data Mining, Machine Learning, Multi-task Learning, Federated Learning, and Deep Learning motivated by real-world problems in various domains with device data, especially in developing robust and efficient methods for on-device sensor data learning.</p>
+      <p>I am a Ph.D. student in the Department of Computer Science at George Mason University, supervised by Prof. Huzefa Rangwala. My research interests are Data Mining, Machine Learning, Multi-task Learning, Federated Learning, and Deep Learning motivated by real-world problems in various domains with IoT sensor device data, especially in developing robust and efficient methods for on-device sensor data learning.</p>
 
     </div>
 
@@ -767,14 +782,16 @@
 
       
       <div class="col-md-5">
-        <h3>Interests</h3>
+        <div class="section-subheading">Interests</div>
         <ul class="ul-interests">
-          
-          <li>Data Mining</li>
           
           <li>Machine Learning</li>
           
           <li>Federated Learning</li>
+          
+          <li>Deep Learning</li>
+          
+          <li>Reinforcement Learning</li>
           
         </ul>
       </div>
@@ -782,7 +799,7 @@
 
       
       <div class="col-md-7">
-        <h3>Education</h3>
+        <div class="section-subheading">Education</div>
         <ul class="ul-edu fa-ul">
           
           <li>
@@ -826,6 +843,8 @@
   
   
   
+  
+
   
 
   
@@ -912,8 +931,8 @@
     <div class="col py-2">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title exp-title text-muted mt-0 mb-1">Graduate Research Assistant</h4>
-          <h4 class="card-title exp-company text-muted my-0">Data Mining Lab of George Mason University</h4>
+          <div class="section-subheading card-title exp-title text-muted mt-0 mb-1">Graduate Research Assistant</div>
+          <div class="section-subheading card-title exp-company text-muted my-0">Data Mining Lab of George Mason University</div>
           <div class="text-muted exp-meta">
             May 2017 –
             
@@ -954,8 +973,8 @@
     <div class="col py-2">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title exp-title text-muted mt-0 mb-1">Graduate Teaching Assistant</h4>
-          <h4 class="card-title exp-company text-muted my-0">Computer Science, George Mason University</h4>
+          <div class="section-subheading card-title exp-title text-muted mt-0 mb-1">Graduate Teaching Assistant</div>
+          <div class="section-subheading card-title exp-company text-muted my-0">Computer Science, George Mason University</div>
           <div class="text-muted exp-meta">
             Aug 2016 –
             
@@ -999,8 +1018,8 @@
     <div class="col py-2">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title exp-title text-muted mt-0 mb-1">Lead Designer</h4>
-          <h4 class="card-title exp-company text-muted my-0">Intel China</h4>
+          <div class="section-subheading card-title exp-title text-muted mt-0 mb-1">Lead Designer</div>
+          <div class="section-subheading card-title exp-company text-muted my-0">Intel China</div>
           <div class="text-muted exp-meta">
             Feb 2014 –
             
@@ -1040,8 +1059,8 @@
     <div class="col py-2">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title exp-title text-muted mt-0 mb-1">Front-end Engineer</h4>
-          <h4 class="card-title exp-company text-muted my-0">China Software Testing Center</h4>
+          <div class="section-subheading card-title exp-title text-muted mt-0 mb-1">Front-end Engineer</div>
+          <div class="section-subheading card-title exp-company text-muted my-0">China Software Testing Center</div>
           <div class="text-muted exp-meta">
             Jun 2011 –
             
@@ -1075,6 +1094,8 @@
   
   
   
+  
+
   
 
   
@@ -1195,9 +1216,9 @@
 <div class="media stream-item">
   <div class="media-body">
 
-    <h3 class="article-title mb-0 mt-0">
+    <div class="section-subheading article-title mb-0 mt-0">
       <a href="/publication/asofed/" >Asynchronous Online Federated Learning for Edge Devices with Non-IID Data</a>
-    </h3>
+    </div>
 
     
     <a href="/publication/asofed/"  class="summary-link">
@@ -1242,16 +1263,16 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/pdf/1911.02134.pdf" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/1911.02134.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
-<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
         data-filename="/publication/asofed/cite.bib">
   Cite
-</button>
+</a>
 
 
 
@@ -1306,9 +1327,9 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
 <div class="media stream-item">
   <div class="media-body">
 
-    <h3 class="article-title mb-0 mt-0">
+    <div class="section-subheading article-title mb-0 mt-0">
       <a href="/publication/fedat/" >FedAT: A communication-efficient federated learning method with asynchronous tiers under non-iid data</a>
-    </h3>
+    </div>
 
     
     <a href="/publication/fedat/"  class="summary-link">
@@ -1354,16 +1375,16 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://arxiv.org/pdf/2010.05958.pdf" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2010.05958.pdf" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
-<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
         data-filename="/publication/fedat/cite.bib">
   Cite
-</button>
+</a>
 
 
 
@@ -1418,9 +1439,9 @@ In 2020 IEEE International Conference on Big Data (Big Data)</span>
 <div class="media stream-item">
   <div class="media-body">
 
-    <h3 class="article-title mb-0 mt-0">
+    <div class="section-subheading article-title mb-0 mt-0">
       <a href="/publication/matt/" >Attention-based Multi-task Learning for Sensor Analytics</a>
-    </h3>
+    </div>
 
     
     <a href="/publication/matt/"  class="summary-link">
@@ -1463,16 +1484,16 @@ In 2019 IEEE International Conference on Big Data (Big Data)</span>
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/abstract/document/9006207?casa_token=hBy6rdBAptkAAAAA:QVY0w_hZ0Hj6j4mhAj98TP5n7InsBVgUZ1ZJpqHVVaMQ9wQz2MKeVuITGhWGCPXGa_ent6a4Jw" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/abstract/document/9006207?casa_token=hBy6rdBAptkAAAAA:QVY0w_hZ0Hj6j4mhAj98TP5n7InsBVgUZ1ZJpqHVVaMQ9wQz2MKeVuITGhWGCPXGa_ent6a4Jw" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
-<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
         data-filename="/publication/matt/cite.bib">
   Cite
-</button>
+</a>
 
 
 
@@ -1527,9 +1548,9 @@ In 2019 IEEE International Conference on Big Data (Big Data)</span>
 <div class="media stream-item">
   <div class="media-body">
 
-    <h3 class="article-title mb-0 mt-0">
+    <div class="section-subheading article-title mb-0 mt-0">
       <a href="/publication/lak/" >Running out of stem: a comparative study across stem majors of college students at-risk of dropping out early</a>
-    </h3>
+    </div>
 
     
     <a href="/publication/lak/"  class="summary-link">
@@ -1573,16 +1594,16 @@ In Proceedings of the 8th international conference on learning analytics and kno
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://dl.acm.org/doi/pdf/10.1145/3170358.3170410" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://dl.acm.org/doi/pdf/10.1145/3170358.3170410" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
-<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
         data-filename="/publication/lak/cite.bib">
   Cite
-</button>
+</a>
 
 
 
@@ -1637,9 +1658,9 @@ In Proceedings of the 8th international conference on learning analytics and kno
 <div class="media stream-item">
   <div class="media-body">
 
-    <h3 class="article-title mb-0 mt-0">
+    <div class="section-subheading article-title mb-0 mt-0">
       <a href="/publication/fathom/" >Federated Multi-task Learning with Hierarchical Attention for Sensor Data Analytics</a>
-    </h3>
+    </div>
 
     
     <a href="/publication/fathom/"  class="summary-link">
@@ -1684,16 +1705,16 @@ In 2020 International Joint Conference on Neural Networks (IJCNN)</span>
 
 
 
-<a class="btn btn-outline-primary my-1 mr-1 btn-sm" href="https://ieeexplore.ieee.org/abstract/document/9207508?casa_token=F-aXyUvBDN8AAAAA:Kw9tZ1i9KxHn_fgim9pCNKuObhZRLbzxe0ie1BSEj7B1Tr8IjTNNtvyCsy58d0fANAovEsV-OQ" target="_blank" rel="noopener">
+<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://ieeexplore.ieee.org/abstract/document/9207508?casa_token=F-aXyUvBDN8AAAAA:Kw9tZ1i9KxHn_fgim9pCNKuObhZRLbzxe0ie1BSEj7B1Tr8IjTNNtvyCsy58d0fANAovEsV-OQ" target="_blank" rel="noopener">
   PDF
 </a>
 
 
 
-<button type="button" class="btn btn-outline-primary my-1 mr-1 btn-sm js-cite-modal"
+<a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
         data-filename="/publication/fathom/cite.bib">
   Cite
-</button>
+</a>
 
 
 
@@ -1922,11 +1943,10 @@ In 2020 International Joint Conference on Neural Networks (IJCNN)</span>
     
     
       
+      
     
     
-    
-    
-    <script src="/js/wowchemy.min.d0d321ad6c45c08297f04e4ff03367d3.js"></script>
+    <script src="/js/wowchemy.min.aeecf26c1eff6b9588dbafc1a9f3953c.js"></script>
 
     
 
